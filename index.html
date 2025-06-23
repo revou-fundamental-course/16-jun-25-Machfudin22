@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kalkulator Segitiga - Machfudin</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="card">
+		<header>
+			<h1 class="title">Katik Segitiga</h1>
+			<div class="nav-menu">
+				<button class="nav-link active" id="keliling-link">Keliling Segitiga</button>
+				<button class="nav-link" id="luas-link">Luas Segitiga</button>
+			</div>
+		</header>
+
+		<!-- Keliling Form -->
+		<main class="active" id="keliling-form">
+			<form onsubmit="hitungKeliling(event)">
+				<div class="form-group">
+					<label for="s1">Sisi 1:</label>
+					<input type="number" id="s1" class="keliling-input" placeholder="Masukkan nilai sisi 1">
+					<div class="error-message" id="s1-error">Harap isi sisi 1 dengan angka</div>
+				</div>
+				<div class="form-group">
+					<label for="s2">Sisi 2:</label>
+					<input type="number" id="s2" class="keliling-input" placeholder="Masukkan nilai sisi 2">
+					<div class="error-message" id="s2-error">Harap isi sisi 2 dengan angka</div>
+				</div>
+				<div class="form-group">
+					<label for="s3">Sisi 3:</label>
+					<input type="number" id="s3" class="keliling-input" placeholder="Masukkan nilai sisi 3">
+					<div class="error-message" id="s3-error">Harap isi sisi 3 dengan angka</div>
+				</div>
+
+				<div class="button-group">
+					<button type="submit" class="btn-green" id="hitung-keliling-btn">Hitung
+						Keliling</button>
+					<button type="button" class="btn-yellow" onclick="resetForm('keliling')">Reset</button>
+				</div>
+			</form>
+
+			<div id="keliling-result">
+				<strong>Keliling: <span id="keliling-value">0</span></strong>
+				<div class="button-group" id="show-perhitungan-btn">
+					<button class="btn-gray" onclick="showCalculation('keliling')">Lihat Perhitungan</button>
+				</div>
+				<div id="keliling-rumus-box">
+					<div class="rumus-title">Rumus Keliling Segitiga:</div>
+					<div class="rumus">K = Sisi 1 + Sisi 2 + Sisi 3</div>
+				</div>
+				<div id="keliling-perhitungan"></div>
+			</div>
+		</main>
+
+		<!-- Luas Form -->
+		<main class="form-section" id="luas-form">
+			<form onsubmit="hitungLuas(event)">
+				<div class="form-group">
+					<label for="alas">Alas:</label>
+					<input type="number" id="alas" class="luas-input" placeholder="Masukkan nilai alas">
+					<div class="error-message" id="alas-error">Harap isi alas dengan angka</div>
+				</div>
+				<div class="form-group">
+					<label for="tinggi">Tinggi:</label>
+					<input type="number" id="tinggi" class="luas-input" placeholder="Masukkan nilai tinggi">
+					<div class="error-message" id="tinggi-error">Harap isi tinggi dengan angka</div>
+				</div>
+
+				<div class="button-group">
+					<button type="submit" class="btn-green" id="hitung-luas-btn">Hitung Luas</button>
+					<button type="button" class="btn-yellow" onclick="resetForm('luas')">Reset</button>
+				</div>
+			</form>
+
+			<div id="luas-result">
+				<strong>Luas: <span id="luas-value">0</span></strong>
+				<div class="button-group" id="show-perhitungan-btn-luas">
+					<button class="btn-gray" onclick="showCalculation('luas')">Lihat Perhitungan</button>
+				</div>
+				<div id="luas-rumus-box">
+					<div class="rumus-title">Rumus Luas Segitiga:</div>
+					<div class="rumus">L = 1/2 × Alas × Tinggi</div>
+				</div>
+				<div id="luas-perhitungan"></div>
+			</div>
+		</main>
+	</div>
+	<footer class="footer">
+		&copy; 2025 Katik Segitiga. All rights reserved.
+	</footer>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

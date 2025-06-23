@@ -1,0 +1,255 @@
+/* Atur layout utama agar footer selalu di bawah */
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', sans-serif;
+	background-color: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	flex: 1;
+}
+
+/* Kontainer utama kartu kalkulator */
+.card {
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 500px;
+	padding: 25px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+/* Header dan judul */
+header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.title {
+	margin-bottom: 20px;
+}
+
+/* Navigasi tab */
+.nav-menu {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.nav-link {
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 8px;
+	text-decoration: none;
+	color: #343a40;
+	background-color: white;
+	transition: all 0.3s ease;
+	border: 1px solid #ced4da;
+}
+
+.nav-link:hover {
+	background-color: #e9ecef;
+}
+
+.nav-link.active {
+	background-color: #007BFF;
+	color: white;
+	border-color: #007BFF;
+	font-weight: bold;
+}
+
+/* Form Section */
+main {
+	display: none;
+}
+
+main.active {
+	display: block;
+}
+
+/* Form dan Input */
+.form-group {
+	margin-bottom: 15px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: #343a40;
+	font-weight: 500;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ced4da;
+	border-radius: 8px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+input.invalid {
+	border-color: red;
+}
+
+/* Untuk Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Untuk Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+/* Pesan Error */
+.error-message {
+	color: red;
+	font-size: 0.8rem;
+	margin-top: 5px;
+	display: none;
+}
+
+.error-message.active {
+	display: block;
+}
+
+/* Tombol */
+.button-group {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	flex: 1;
+}
+
+.btn-green {
+	background-color: #198754;
+	color: white;
+}
+
+.btn-yellow {
+	background-color: #ffc107;
+	color: black;
+}
+
+.btn-gray {
+	background-color: #6c757d;
+	color: white;
+}
+
+button:hover {
+	opacity: 0.9;
+}
+
+/* Hasil */
+#keliling-result,
+#luas-result {
+	margin-top: 20px;
+	padding: 15px;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+	display: none;
+}
+
+#keliling-result.active,
+#luas-result.active {
+	display: block;
+	animation: fadeIn 0.5s ease;
+}
+
+#luas-perhitungan,
+#keliling-perhitungan {
+	margin-top: 10px;
+	font-style: italic;
+	color: #6c757d;
+	display: none;
+}
+
+#luas-perhitungan.active,
+#keliling-perhitungan.active {
+	display: block;
+	animation: fadeIn 0.5s ease;
+}
+
+/* Rumus */
+#luas-rumus-box,
+#keliling-rumus-box {
+	background-color: #e9ecef;
+	padding: 15px;
+	border-radius: 8px;
+	margin-top: 15px;
+	display: none;
+}
+
+#luas-rumus-box.active,
+#keliling-rumus-box.active {
+	display: block;
+	animation: fadeIn 0.5s ease;
+}
+
+.rumus-title {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.rumus {
+	font-family: 'Courier New', monospace;
+	background-color: white;
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+#show-perhitungan-btn,
+#show-perhitungan-btn-luas {
+	margin-top: 10px;
+	display: none;
+}
+
+/* Footer mentok bawah */
+.footer {
+	text-align: center;
+	background-color: #343a40;
+	color: #f8f9fa;
+	font-size: 14px;
+	padding: 15px 10px;
+	margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+	.card {
+		padding: 15px;
+	}
+
+	.nav-menu {
+		flex-direction: column;
+	}
+
+	.button-group {
+		flex-direction: column;
+	}
+
+	.footer {
+		font-size: 12px;
+	}
+}
