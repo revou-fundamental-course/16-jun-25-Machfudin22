@@ -27,7 +27,7 @@ Demo website dapat dilihat disini. [Lihat Demo](https://revou-fundamental-course
 1. **Clone Repository**
 
 ```bash
-git clone https://github.com/machfudin37/elibrary.git
+git clone https://github.com/revou-fundamental-course/16-jun-25-Machfudin22.git
 ```
 
 2. **Setelah proses cloning selesai, masuk ke dalam direktori proyek**
